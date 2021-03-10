@@ -66,16 +66,13 @@ const ws = {
     if (xVal < 0) {
       // enable left button if carousel has been scrolled
       leftButton.classList.remove('disabled');
-      console.log('xval is less than zero. enable left');
       if ((xVal * -1) >= contentWidth - 902) {
         // disable right button if scrolling has reached end of content
         rightButton.classList.add('disabled');
-        console.log('absolute xval is greater than or equal to the content width. disable right');
       }
       else {
         // otherwise, enable the right button
         rightButton.classList.remove('disabled');
-        console.log('absolute xval is less than the content width. enable right');
       }
     }
     else {
