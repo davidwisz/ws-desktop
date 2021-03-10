@@ -1,0 +1,452 @@
+/* BEGIN RESETS, DOCUMENT STYLES */
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+a img {
+  border: none;
+  width: 100%;
+}
+
+a .hover-underline,
+.copy a {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.25s linear;
+}
+
+a:hover .hover-underline,
+.copy a:hover {
+  background-size: 0 1px, 100% 1px;
+}
+
+.copy a:hover,
+.copy a:focus,
+.copy a:active {
+  color: #cfb672;
+}
+.copy a {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#cfb672, #cfb672);
+}
+
+.center {
+  text-align: center;
+}
+
+/* END RESETS, DOCUMENT STYLES */
+/* BEGIN TYPOGRAPHY */
+/* overpass-regular - latin */
+@font-face {
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/overpass-v5-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/overpass-v5-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/overpass-v5-latin-regular.woff2") format("woff2"), url("../fonts/overpass-v5-latin-regular.woff") format("woff"), url("../fonts/overpass-v5-latin-regular.ttf") format("truetype"), url("../fonts/overpass-v5-latin-regular.svg#Overpass") format("svg");
+  /* Legacy iOS */
+}
+/* poppins-regular - latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/poppins-v15-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/poppins-v15-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/poppins-v15-latin-regular.woff2") format("woff2"), url("../fonts/poppins-v15-latin-regular.woff") format("woff"), url("../fonts/poppins-v15-latin-regular.ttf") format("truetype"), url("../fonts/poppins-v15-latin-regular.svg#Poppins") format("svg");
+  /* Legacy iOS */
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #000;
+  font-family: "Overpass", Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+h1 {
+  line-height: 1.567;
+  margin: 25px auto 5px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 24px;
+  letter-spacing: 0;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.collection h2 {
+  font-size: 34px;
+  line-height: 1;
+  margin-bottom: 22px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+p {
+  color: #666666;
+  line-height: 1.75;
+  margin: 0 auto;
+}
+
+/* END TYPOGRAPHY */
+/* BEGIN PAGE ELEMENTS */
+header {
+  align-items: center;
+  background: #fff url(../img/header-background.png) center top no-repeat;
+  display: flex;
+  height: 181px;
+  line-height: 1;
+  text-align: center;
+}
+
+.logo {
+  margin: auto;
+  width: 371px;
+}
+
+main,
+.content {
+  margin: auto;
+  max-width: 990px;
+}
+
+.intro {
+  text-align: center;
+}
+
+.cta {
+  background-color: #080909;
+  color: #fff;
+  display: inline-block;
+  font-family: "Overpass", Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.065em;
+  line-height: 1.41;
+  margin: 25px auto 35px;
+  padding: 16px 70px;
+  text-align: center;
+  text-decoration: none;
+}
+
+section {
+  padding: 36px 0 65px 0;
+}
+
+.collection {
+  margin: 0 auto 100px;
+  position: relative;
+}
+
+.collection.last {
+  margin-bottom: 50px;
+}
+
+.cta-animated {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+section div {
+  position: relative;
+  z-index: 3;
+}
+
+.cta.cta-label {
+  background-color: rgba(8, 9, 9, 0.65);
+  bottom: -40px;
+  display: inline-block;
+  font-size: 15px;
+  height: 40px;
+  left: 0;
+  letter-spacing: 0.02em;
+  margin: auto;
+  padding: 10px 0;
+  position: absolute;
+  transition: transform 450ms;
+  white-space: nowrap;
+  width: 100%;
+  will-change: transform;
+}
+
+.cta-animated:hover .cta.cta-label {
+  transition: transform 125ms;
+  transform: translateY(-40px);
+}
+
+.primary .cta.cta-label {
+  font-size: 16px;
+  left: 317px;
+  width: 357px;
+}
+
+.layout-staggered .primary .cta.cta-label {
+  left: 95px;
+}
+
+.bg {
+  background-color: #f5f6f7;
+  bottom: 0;
+  height: 505px;
+  margin-left: -90px;
+  position: absolute;
+  width: 1170px;
+  z-index: 1;
+}
+
+.bg-wide {
+  background-color: #f5f6f7;
+  margin-bottom: 46px;
+  margin-left: -346px;
+  text-align: center;
+  width: 1682px;
+}
+
+.three-col,
+.two-col,
+.nested-col {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.three-col {
+  padding: 30px 0 0 30px;
+}
+
+.reversed .three-col {
+  padding: 30px 12px 0 20px;
+}
+
+.three-col .col,
+.two-col .col,
+.nested-col .col {
+  flex: 1 1 0;
+  margin-right: 12px;
+}
+
+.three-col .copy {
+  padding-left: 24px;
+}
+
+.reversed .three-col .copy {
+  padding-left: 0;
+  padding-right: 24px;
+}
+
+.nested-col {
+  padding: 30px 0 0 0;
+}
+
+.two-col > .col {
+  margin-right: auto;
+}
+
+.two-col .col.wider {
+  flex: 0 1 547px;
+  margin: 0;
+}
+.two-col .col.narrower {
+  padding: 0 35px 0 20px;
+}
+.two-col .copy {
+  margin-bottom: 60px;
+  padding-left: 40px;
+}
+.two-col .copy p {
+  padding-right: 40px;
+}
+.two-col .copy .tighter-wrap {
+  padding-right: 90px;
+}
+
+.reversed .two-col .col.narrower {
+  padding: 0 20px 0 35px;
+}
+.reversed .two-col .copy {
+  margin-bottom: 90px;
+  padding-left: 0;
+}
+.reversed .nested-col {
+  float: right;
+}
+.reversed .nested-col .col {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.nested-col .col {
+  flex: 0 1 236px;
+  margin-right: 10px;
+}
+
+.copy p {
+  margin: 15px auto;
+}
+
+.bg-wide .three-col {
+  align-items: flex-start;
+  padding: 40px 0 0 0;
+}
+.bg-wide .col p {
+  font-size: 14px;
+  padding: 0 25px;
+}
+.bg-wide .col.organic p {
+  padding: 0 54px;
+}
+
+.sustainability .col {
+  background: transparent url(../img/sprite-sustainability.gif) center 5px no-repeat;
+  padding-top: 100px;
+}
+.sustainability .col.fsc {
+  background-position: center -280px;
+}
+.sustainability .col.organic {
+  background-position: center -554px;
+}
+
+/* BEGIN CAROUSEL */
+.carousel .three-col {
+  padding-left: 0;
+}
+
+.three-col .col.arrow {
+  flex: 0 1 35px;
+}
+.three-col .col.arrow.right {
+  margin: 0;
+}
+
+.carousel-arrow {
+  background: transparent;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Overpass", Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.carousel-arrow:hover, .carousel-arrow:focus {
+  background: transparent;
+}
+.carousel-arrow:focus {
+  outline: 1px solid transparent;
+  outline-offset: -4px;
+}
+.carousel-arrow:active {
+  transform: scale(0.99);
+}
+.carousel-arrow.disabled {
+  color: #f5f6f7;
+  cursor: default;
+}
+
+.slide-container {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+.slides {
+  transition: transform 450ms ease-in-out;
+}
+
+.cta-animated.slide {
+  display: inline-block;
+  margin-right: 16px;
+}
+
+/* END CAROUSEL */
+/* BEGIN KIDS SECTION */
+.bg-wide.kids {
+  background: transparent url(../img/kids-background.gif) center top no-repeat;
+}
+
+.kids .two-col .copy {
+  margin-bottom: 0;
+  padding: 0 80px 0 0;
+}
+.kids .two-col .copy p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 32px 0;
+  padding: 0 65px;
+}
+.kids .col.photos {
+  align-items: flex-start;
+  flex: 0 1 530px;
+  height: 409px;
+  overflow: hidden;
+}
+.kids .photos img {
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  transition: opacity 500ms;
+}
+.kids .photos img.hide {
+  opacity: 0;
+}
+
+.kids-section-logo {
+  margin: auto;
+  width: 200px;
+}
+
+/* END KIDS SECTION */
+/* END PAGE ELEMENTS */
+
+/*# sourceMappingURL=style.css.map */
